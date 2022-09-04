@@ -1,0 +1,15 @@
++ в целом хорошо, вёрстка хорошо смотрится, точно стоит почитать про БЭМ,
+это даст сильный буст в понимании что можно сделать лучше.
+
+вложенная папка лишняя, нужен сразу проект в корне
+
+в репозиторий надо добавлять README.md и .gitignore
+
+- https://validator.w3.org/nu/#textarea
+выдаёт ошибки на html разметку
+
+Также стоит почитать про адаптивную вёрстку
+https://tproger.ru/translations/responsive-web-design-tips/
+также можно почитать про grid вёрстку, всё таки флексы в некоторых местах уступают для создания компоновки
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://css-tricks.com/snippets/css/complete-guide-grid/

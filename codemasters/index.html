@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--lang=ru, у тебя нет ничего английского здесь-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +11,12 @@
 <body>
     <div class="left-container">
         <div class="photo">
-            <img src="https://sun7.userapi.com/sun7-7/s/v1/ig2/sUjzrtBNU-3SD3I5jh_WpdQ3LFmqDlkxCBteEQTly_--cQdX6nB1L_iE5kSAExlpIZPlf8ddfXoNikowm5SViK3M.jpg?size=617x694&quality=96&type=album" alt="">    
+<!--            вот так вообще никогда не стоит делать, по сути ты пишешь сайт который берёт другие сайты и использует с них инфу-->
+<!--            альтернативные варианты: использовать CDN, использовать свой АПИ который отдаёт твою картинку и самый норм для-->
+<!--            такой простой работы - вставить картинку из файловой системы, например photo.jpg-->
+            <img src="https://sun7.userapi.com/sun7-7/s/v1/ig2/sUjzrtBNU-3SD3I5jh_WpdQ3LFmqDlkxCBteEQTly_--cQdX6nB1L_iE5kSAExlpIZPlf8ddfXoNikowm5SViK3M.jpg?size=617x694&quality=96&type=album" alt="">
+
+<!--            инлайновые стили не используются в 99.9% случаев, для этого есть css файлы-->
             <h1 style="font-weight: 500;">Алексей</h1>
             <h1 style="font-weight: 800;">Кирюхин</h1>
         </div>
