@@ -1,8 +1,4 @@
-/*так не стоит делать, это можно задать на body*/
-/*это расчёты для каждого тега браузеру не нужны, он сам возьмёт из каскада, т.е. из <body> тега*/
 *{
-    /*уже есть универсальный способ правильно сбросить через*/
-    /*https://necolas.github.io/normalize.css/*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,15 +7,9 @@
     color: #333;
     font-family: Roboto, sans-serif;
 }
-
-/* почти все эти стили для блока внутри body, а не для самого body*/
 body{
     box-shadow: -80px 80px 120px #8c8b8b;
-
-    /*body всегда занимает 100vw, а вот блок внутри уже может быть меньше по ширине через max-width: 60vw*/
-    width: 60vw;
-
-    /*практически никогда не ограничивают высоту контента, т.к. высота контента обычно динамическая*/
+    max-width: 60vw;
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -27,21 +17,24 @@ body{
     background-color: #ebe8e8;
 }
 
-/*нужен класс, например .heading, стили не пишут к тегам, плохая практика*/
-h3 {
+.name{
+    font-weight: 500;
+}
+
+.second__name{
+    font-weight: 800;
+}
+
+.header {
     width: 45%;
     margin-right: 20px;
 }
 
-/*плохое именование, если компоновка изменится и блок окажется справа относительно остального контента? по хорошему это .sidebar*/
-.left-container{
+
+.sidebar{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /*тот случай где точное значение в пикселях - лучше, вообще идея резиновой вёрстки практически никогда не встречается,*/
-    /*стоит почитать про адаптив*/
-    /*https://tproger.ru/translations/responsive-web-design-tips/*/
     width: 30%;
     height: 100%;
     overflow: hidden;
@@ -50,9 +43,8 @@ h3 {
     box-sizing: border-box;
 }
 
-/*проценты редко используются, я бы сказал их использование всегда под вопросом, это ближе к компоновке на мобилках, не для веба*/
 .photo {
-    padding-top: 10%;
+    padding-top: 50px;
     top: 0;
     height: 30%;
     width: 100%;
@@ -84,10 +76,8 @@ h3 {
 
 .contacts__topic{
     margin: 0 auto;
-    width: 70%;
-
-    /*ты везде используешь hex что корректно, здесь не вижу причины зачем rgb()*/
-    background-color: rgb(80, 80, 80);
+    display: flex;
+    background-color: #505050;
     text-align: center;
     top: -10px;
     color: #fff;
@@ -95,9 +85,7 @@ h3 {
     padding: 7px 5px;
     margin-bottom: 20px;
     border-radius: 1px;
-
-    /*ты везде используешь hex что корректно, здесь не вижу причины зачем имя цвета вместо #000*/
-    box-shadow: 3px 3px 5px black;
+    box-shadow: 3px 3px 5px #000;
 }
 
 .contacts{
@@ -130,10 +118,6 @@ h3 {
     align-items: center;
 }
 
-/*идею я понял, что у тебя 30 на 70 макет, но здесь нужны гриды по хорошему, да и для флексов делается немного по другому,
-скажем вместо width: 70% указывают flex: 1 1 auto, т.е. расстягиваешь блок на всю доступную ширину, это удобнее при рефакторинге
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-*/
 .right-container{
     display: flex;
     flex-direction: column;
